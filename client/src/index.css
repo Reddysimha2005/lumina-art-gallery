@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f5f5f5; /* Off-white for text in dark mode */
+  --color-primary-dark: #d4d4d4;
+  --color-secondary: #0a0a0a; /* Deep dark background */
+  --color-accent: #d4af37; /* Gold accent for premium feel */
+  --color-accent-hover: #b5952f;
+  --color-surface: #171717; /* Card background */
+  --color-surface-light: #262626; /* Hover state for cards */
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', serif; /* For premium headers */
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-[#f5f5f5] font-sans antialiased selection:bg-[#d4af37] selection:text-[#0a0a0a];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-wide;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#d4af37] text-[#0a0a0a] px-6 py-3 rounded-none font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-[#b5952f] active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply border border-[#d4af37] text-[#d4af37] px-6 py-3 rounded-none font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-[#d4af37] hover:text-[#0a0a0a] active:scale-95;
+  }
+
+  .card {
+    @apply bg-[#171717] rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply w-full bg-[#171717] border border-[#333] text-[#f5f5f5] px-4 py-3 rounded-lg focus:outline-none focus:border-[#d4af37] transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Utility to hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
