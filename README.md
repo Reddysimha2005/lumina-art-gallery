@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lumina - Online Art Gallery
 
 A premium, fully functional MERN stack web application for an Online Art Gallery. Features a mobile-responsive "deep dark mode" UI, OTP verification, JWT session management, role-based access, and Razorpay payment integration.
@@ -64,3 +65,6 @@ npm run dev
 1. Sign up for a Razorpay account and generate Test API Keys.
 2. Put the `RAZORPAY_KEY_ID` in `server/.env` and update `Checkout.jsx` (Frontend) to use the same key.
 3. When checking out, you can use any dummy card details provided by Razorpay's test mode documentation.
+=======
+"# lumina-art-gallery" 
+>>>>>>> 3d37f3f25c718fe5d7b14d0dfc9e355d1a2b31fb
